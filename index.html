@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>huveo — Le sherpa numérique des PME et OBNL du Québec</title>
+<meta name="description" content="huveo accompagne les PME et OBNL du Québec dans leur transformation numérique : stratégie numérique et ancrage numérique, du diagnostic jusqu'aux résultats.">
+<link rel="icon" type="image/png" href="assets/Ico_ne_seule___transparent2x.png">
+<link rel="canonical" href="https://huveo.ca/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="huveo">
+<meta property="og:locale" content="fr_CA">
+<meta property="og:url" content="https://huveo.ca/">
+<meta property="og:title" content="huveo — Le sherpa numérique des PME et OBNL du Québec">
+<meta property="og:description" content="Stratégie numérique et ancrage numérique : huveo accompagne les PME et OBNL du Québec du diagnostic jusqu'aux résultats, sans jamais lâcher la corde.">
+<meta property="og:image" content="https://huveo.ca/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="huveo — Comprendre. Transformer. Durer.">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="huveo — Le sherpa numérique des PME et OBNL du Québec">
+<meta name="twitter:description" content="Stratégie numérique et ancrage numérique : huveo accompagne les PME et OBNL du Québec du diagnostic jusqu'aux résultats.">
+<meta name="twitter:image" content="https://huveo.ca/assets/og-image.jpg">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "huveo",
+  "description": "huveo accompagne les PME et OBNL du Québec dans leur transformation numérique : stratégie numérique et ancrage numérique, du diagnostic jusqu'aux résultats.",
+  "url": "https://huveo.ca/",
+  "logo": "https://huveo.ca/assets/Logo___transparent_texte_noir3x.png",
+  "image": "https://huveo.ca/assets/og-image.jpg",
+  "email": "info@huveo.ca",
+  "telephone": "+1-438-701-0099",
+  "areaServed": {
+    "@type": "State",
+    "name": "Québec"
+  },
+  "serviceType": ["Stratégie numérique", "Ancrage numérique"],
+  "slogan": "Comprendre. Transformer. Durer."
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue:#1565D8;
+    --green:#19B562;
+    --cyan:#29C5E0;
+    --ink:#101010;
+    --offwhite:#F5F5F5;
+    --anthracite:#14181F;
+    --white:#ffffff;
+    --max: 1120px;
+  }
+
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth; overflow-x:hidden;}
+  body{
+    font-family:'Quicksand', Arial, sans-serif;
+    font-weight:500;
+    color:var(--ink);
+    background:var(--white);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3{font-weight:700; line-height:1.15; letter-spacing:-0.01em;}
+  h2{margin:14px 0 20px;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-weight:700; text-transform:uppercase; font-size:.72rem;
+    letter-spacing:.14em; color:var(--blue);
+  }
+  section{position:relative;}
+  .btn{
+    display:inline-flex; align-items:center; gap:10px;
+    background:var(--blue); color:var(--white);
+    font-weight:700; font-size:1rem;
+    padding:14px 28px; border-radius:100px;
+    border:2px solid var(--blue);
+    transition:transform .18s ease, background .18s ease, color .18s ease;
+  }
+  .btn:hover{background:var(--white); color:var(--blue); transform:translateY(-2px);}
+  .btn:focus-visible{outline:3px solid var(--cyan); outline-offset:3px;}
+  .btn.ghost{background:transparent; color:var(--white); border-color:rgba(255,255,255,.6);}
+  .btn.ghost:hover{background:var(--white); color:var(--anthracite);}
+
+  /* ---------- Route / trail spine ---------- */
+  .trail-dot{
+    position:absolute; left:-999px; width:10px; height:10px; border-radius:50%;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    position:fixed; top:0; left:0; width:100%; z-index:50;
+    background:transparent;
+    backdrop-filter:none;
+    border-bottom:1px solid transparent;
+    transition:background .25s ease, border-color .25s ease;
+  }
+  header.scrolled{
+    background:rgba(20,24,31,.72);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,.1);
+  }
+  header .bar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:18px; padding-bottom:18px;
+  }
+  header img.logo{height:56px; width:auto; transition:height .25s ease;}
+  header.scrolled img.logo{height:44px;}
+  nav.primary-nav{display:flex; gap:32px; align-items:center;}
+  nav.primary-nav a:not(.btn){font-weight:600; font-size:.95rem; color:var(--white); position:relative;}
+  nav.primary-nav a:not(.btn)::after{
+    content:""; position:absolute; left:0; bottom:-4px; width:0; height:2px;
+    background:var(--cyan); transition:width .2s ease;
+  }
+  nav.primary-nav a:not(.btn):hover::after{width:100%;}
+  .nav-cta{display:none; color:var(--white) !important;}
+  @media(min-width:780px){ .nav-cta{display:inline-flex;} }
+  .menu-links{display:none;}
+  @media(min-width:780px){ .menu-links{display:flex;} }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:var(--anthracite);
+    color:var(--white);
+    overflow:hidden;
+    padding:clamp(110px, 16vw, 160px) 0 clamp(96px, 12vw, 140px);
+  }
+  .hero .wrap{position:relative; z-index:2;}
+  .hero .petals{
+    position:absolute; z-index:1; pointer-events:none;
+  }
+  .hero-eyebrow{color:var(--cyan);}
+  .hero h1{
+    font-size:clamp(2rem, 4.6vw, 3.4rem);
+    max-width:24ch;
+    margin:48px 0 42px;
+  }
+  .hero h1 .accent{color:var(--green);}
+  .hero p.lead{
+    max-width:52ch; font-size:1.15rem; color:rgba(245,245,245,.82);
+    margin-bottom:56px; font-weight:500;
+  }
+  .hero .cta-row{display:flex; gap:16px; flex-wrap:wrap; align-items:center;}
+  .hero .position-line{
+    margin-top:84px; padding-top:36px;
+    border-top:1px solid rgba(255,255,255,.15);
+    display:flex; gap:16px; flex-wrap:wrap; align-items:baseline; font-weight:700;
+    font-size:clamp(1.5rem, 3.6vw, 2.5rem); letter-spacing:.01em;
+  }
+  .hero .position-line span{color:var(--white);}
+  .hero .position-line span.on{color:var(--cyan);}
+  .hero .position-line span.on.g{color:var(--green);}
+  .hero .position-line span.on.b{color:#4A90F0;}
+
+  /* ---------- Ridge divider ---------- */
+  .ridge{display:block; width:100%; height:64px;}
+
+  /* ---------- Intro / mission-vision ---------- */
+  .intro{padding:76px 0; background:var(--white);}
+  .intro-grid{
+    display:grid; gap:40px; grid-template-columns:1fr;
+    margin-top:28px;
+  }
+  @media(min-width:760px){ .intro-grid{grid-template-columns:1fr 1fr 1fr;} }
+  .intro h2{font-size:clamp(1.7rem,3.2vw,2.3rem); max-width:20ch;}
+  .intro-lead{font-size:1.05rem; max-width:60ch; color:#333;}
+  .mv-card{
+    background:var(--offwhite); border-radius:18px; padding:26px 24px;
+    border-left:4px solid var(--blue);
+  }
+  .mv-card:nth-child(2){border-left-color:var(--green);}
+  .mv-card:nth-child(3){border-left-color:var(--cyan);}
+  .mv-card h3{font-size:1.4rem; margin-bottom:12px;}
+  .mv-card p{font-size:.95rem; color:#3a3a3a;}
+
+  /* ---------- Services ---------- */
+  .services{background:var(--offwhite); padding:84px 0;}
+  .services h2{font-size:clamp(1.7rem,3.2vw,2.3rem); max-width:22ch; margin-top:14px;}
+  .svc-grid{display:grid; gap:26px; margin-top:44px; grid-template-columns:1fr;}
+  @media(min-width:820px){ .svc-grid{grid-template-columns:1fr 1fr;} }
+  .svc-card{
+    background:var(--white); border-radius:22px; padding:34px 30px;
+    box-shadow:0 1px 0 rgba(16,16,16,.04);
+    display:flex; flex-direction:column; gap:16px;
+  }
+  .svc-num{
+    align-self:flex-start;
+    font-weight:700; font-size:.78rem; letter-spacing:.08em; text-transform:uppercase;
+    color:var(--blue); background:rgba(21,101,216,.1);
+    padding:6px 16px; border-radius:100px;
+  }
+  .svc-card:nth-child(2) .svc-num{color:var(--green); background:rgba(25,181,98,.1);}
+  .svc-card h3{font-size:1.4rem;}
+  .svc-card p.tag{font-style:normal; color:#333; font-size:1rem;}
+  .svc-card ul{list-style:none; display:flex; flex-direction:column; gap:10px; margin-top:6px;}
+  .svc-card li{
+    font-size:.94rem; color:#333; padding-left:22px; position:relative;
+  }
+  .svc-card li::before{
+    content:""; position:absolute; left:0; top:8px; width:8px; height:8px;
+    border-radius:50%; background:var(--cyan);
+  }
+  .svc-card:nth-child(2) li::before{background:var(--green);}
+  .svc-foot{
+    margin-top:auto; padding-top:14px; border-top:1px dashed rgba(16,16,16,.12);
+    font-size:.85rem; color:#666;
+  }
+
+  /* ---------- Approach / trail ---------- */
+  .approach{padding:88px 0 96px; background:var(--white); position:relative;}
+  .approach h2{font-size:clamp(1.7rem,3.2vw,2.3rem); max-width:20ch; margin-top:14px;}
+  .approach-lead{max-width:60ch; color:#333; font-size:1rem;}
+  .trail{position:relative; margin-top:52px;}
+  .trail-line{
+    position:absolute; left:19px; top:8px; bottom:8px; width:2px;
+    background:repeating-linear-gradient(to bottom, var(--green) 0 6px, transparent 6px 12px);
+  }
+  @media(min-width:760px){ .trail-line{left:23px;} }
+  .waypoint{
+    position:relative; padding-left:58px; padding-bottom:40px;
+  }
+  .waypoint:last-child{padding-bottom:0;}
+  .waypoint .pin{
+    position:absolute; left:0; top:0;
+    width:40px; height:40px; border-radius:50%;
+    background:var(--white); border:2px solid var(--green);
+    display:flex; align-items:center; justify-content:center;
+    font-weight:700; color:var(--green); font-size:1rem;
+    box-shadow:0 0 0 6px var(--white);
+  }
+  .waypoint:nth-child(4) .pin, .waypoint:nth-child(5) .pin, .waypoint:nth-child(6) .pin{
+    border-color:var(--blue); color:var(--blue);
+  }
+  .waypoint h3{font-size:1.4rem; margin-bottom:8px;}
+  .waypoint p{font-size:1.05rem; color:#3a3a3a; max-width:62ch;}
+
+  /* ---------- Values band ---------- */
+  .values{background:var(--green); color:var(--white); padding:64px 0;}
+  .values .wrap{display:grid; gap:28px; grid-template-columns:1fr; }
+  @media(min-width:760px){ .values .wrap{grid-template-columns: 1.1fr 2fr; align-items:center;} }
+  .values h2{font-size:clamp(1.5rem,2.6vw,2rem); max-width:16ch;}
+  .values-list{display:grid; gap:18px; grid-template-columns:1fr;}
+  @media(min-width:560px){ .values-list{grid-template-columns:1fr 1fr;} }
+  .value-item{
+    background:rgba(255,255,255,.12); border-radius:14px; padding:18px 20px;
+    font-weight:600; font-size:1.1rem;
+  }
+
+  /* ---------- Contact / summit ---------- */
+  .summit{
+    background:var(--anthracite); color:var(--white);
+    padding:96px 0 76px; position:relative; overflow:hidden;
+  }
+  .summit .flag{
+    position:absolute; top:-58px; left:50%; transform:translateX(-50%);
+    width:2px; height:42px; background:var(--cyan);
+  }
+  .summit .flag::after{
+    content:""; position:absolute; top:0; left:2px;
+    width:0; height:0;
+    border-style:solid; border-width:7px 0 7px 14px;
+    border-color:transparent transparent transparent var(--cyan);
+  }
+  .summit-inner{text-align:center; max-width:640px; margin:0 auto; position:relative; z-index:2;}
+  .summit .eyebrow{color:var(--cyan);}
+  .summit h2{font-size:clamp(1.9rem,4vw,2.7rem); margin:16px 0 18px;}
+  .summit p{color:rgba(245,245,245,.78); font-size:1.05rem; margin-bottom:34px;}
+  .summit .cta-row{display:flex; gap:16px; flex-wrap:wrap; justify-content:center;}
+  .summit .details{
+    margin-top:52px; display:flex; gap:32px; justify-content:center; flex-wrap:wrap;
+    font-size:.92rem; color:rgba(245,245,245,.65);
+  }
+  .summit .details a{color:rgba(245,245,245,.9); font-weight:600;}
+
+  /* ---------- Footer ---------- */
+  footer{background:var(--anthracite); border-top:1px solid rgba(255,255,255,.1); padding:36px 0;}
+  footer .wrap{display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:18px;}
+  footer img.logo{height:56px;}
+  footer .copy{color:rgba(245,245,245,.5); font-size:.82rem;}
+
+  /* background petal motif (used in hero & summit) */
+  .petal{position:absolute; border-radius:50%; filter:blur(0);}
+
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; transition-duration:0.001ms !important;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a href="#top" aria-label="huveo — accueil">
+      <img class="logo" src="assets/Logo___transparent_texte_blanc.png" alt="huveo">
+    </a>
+    <nav class="primary-nav">
+      <div class="menu-links" style="gap:32px;">
+        <a href="#services">Services</a>
+        <a href="#approche">Approche</a>
+        <a href="#valeurs">Valeurs</a>
+      </div>
+      <a class="btn nav-cta" href="mailto:info@huveo.ca?subject=Discutons%20de%20votre%20ascension%20num%C3%A9rique">Nous joindre</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <svg class="petals" width="680" height="680" viewBox="0 0 520 520" style="right:-120px; top:-100px; opacity:.30;">
+      <ellipse cx="260" cy="160" rx="110" ry="140" fill="#1565D8"/>
+      <ellipse cx="150" cy="300" rx="120" ry="95" fill="#29C5E0" transform="rotate(-18 150 300)"/>
+      <ellipse cx="360" cy="300" rx="120" ry="95" fill="#19B562" transform="rotate(18 360 300)"/>
+    </svg>
+    <div class="wrap">
+      <p class="eyebrow hero-eyebrow">Stratégie numérique · PME &amp; OBNL du Québec</p>
+      <h1>Le stratège qui vous mène au <span class="accent">sommet</span> de votre transformation numérique.</h1>
+      <p class="lead">huveo accompagne les PME et OBNL du Québec dont les ambitions numériques dépassent les ressources internes — un partenaire qui nomme les choses clairement, sans jargon, et reste engagé du premier diagnostic jusqu'aux résultats, sans jamais lâcher la corde.</p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:info@huveo.ca?subject=Discutons%20de%20votre%20ascension%20num%C3%A9rique">Discuter de votre projet</a>
+        <a class="btn ghost" href="#services">Voir nos services ↓</a>
+      </div>
+      <div class="position-line">
+        <span class="on">Comprendre.</span>
+        <span class="on g">Transformer.</span>
+        <span class="on b">Durer.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO / MISSION VISION -->
+  <section class="intro">
+    <div class="wrap">
+      <p class="eyebrow">Qui est huveo</p>
+      <h2>Le stratège qui reste à vos côtés, du diagnostic aux résultats.</h2>
+      <p class="intro-lead">Les PME et les OBNL ont des ambitions numériques réelles — mais rarement les ressources internes pour les concrétiser seules. huveo est le partenaire qui comprend leur réalité, parle leur langage et reste en cordée jusqu'au sommet.</p>
+      <div class="intro-grid">
+        <div class="mv-card">
+          <h3>Notre mission</h3>
+          <p>Allier l'humain et la technologie pour transformer les organisations.</p>
+        </div>
+        <div class="mv-card">
+          <h3>Notre vision</h3>
+          <p>Devenir la référence que choisissent les organisations qui décident de maîtriser le numérique — plutôt que de le subir.</p>
+        </div>
+        <div class="mv-card">
+          <h3>Notre approche</h3>
+          <p>La gestion du changement traverse chaque mandat. La technologie sert la stratégie — elle ne la dicte jamais.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="wrap">
+      <p class="eyebrow">Nos services</p>
+      <h2>Deux services qui avancent en cordée l'un avec l'autre.</h2>
+
+      <div class="svc-grid">
+        <article class="svc-card">
+          <span class="svc-num">Stratégie</span>
+          <h3>Stratégie numérique</h3>
+          <p class="tag">Tracer la route, sécuriser chaque étape, et rester à vos côtés jusqu'au sommet.</p>
+          <ul>
+            <li>Un diagnostic honnête de vos outils, processus et capacité réelle d'absorber le changement</li>
+            <li>Une feuille de route priorisée, alignée sur vos objectifs et sur le rythme d'adoption de vos équipes</li>
+            <li>Un cadre de suivi simple, pour que la stratégie reste vivante — pas un document qu'on range</li>
+          </ul>
+          <p class="svc-foot">Pour qui : les organisations dont les ambitions numériques dépassent les ressources internes.</p>
+        </article>
+
+        <article class="svc-card">
+          <span class="svc-num">Ancrage</span>
+          <h3>Ancrage numérique</h3>
+          <p class="tag">Le bon ancrage ne garantit pas le sommet — mais son absence garantit presque la chute.</p>
+          <ul>
+            <li>Microsoft 365 et Google Workspace comme points de repère, avec l'IA intégrée en toute transparence</li>
+            <li>Sélection éclairée des licences et niveaux de service, alignés sur vos processus réels</li>
+            <li>Admissibilité et rabais OBNL — un levier budgétaire souvent sous-utilisé</li>
+          </ul>
+          <p class="svc-foot">Pour qui : les organisations qui veulent des choix d'outils faits avec rigueur, pas au hasard.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPROCHE / TRAIL -->
+  <section class="approach" id="approche">
+    <div class="wrap">
+      <p class="eyebrow">Notre approche de livraison</p>
+      <h2>Une ascension, une étape à la fois.</h2>
+      <p class="approach-lead">On ne saute jamais une étape pour aller plus vite — c'est souvent ce qui fait retomber une organisation plus bas qu'avant.</p>
+
+      <div class="trail">
+        <div class="trail-line" aria-hidden="true"></div>
+
+        <div class="waypoint">
+          <span class="pin">1</span>
+          <h3>Le premier contact</h3>
+          <p>Comprendre votre réalité et vos contraintes avant même de proposer un mandat.</p>
+        </div>
+        <div class="waypoint">
+          <span class="pin">2</span>
+          <h3>Le diagnostic</h3>
+          <p>Lire le terrain — outils, processus, gens — pas seulement l'inventaire technique.</p>
+        </div>
+        <div class="waypoint">
+          <span class="pin">3</span>
+          <h3>La feuille de route</h3>
+          <p>Un plan priorisé et séquencé selon votre capacité réelle à absorber le changement.</p>
+        </div>
+        <div class="waypoint">
+          <span class="pin">4</span>
+          <h3>La mise en œuvre</h3>
+          <p>huveo exécute directement — et reste en cordée avec des partenaires quand une expertise pointue est requise.</p>
+        </div>
+        <div class="waypoint">
+          <span class="pin">5</span>
+          <h3>L'adoption</h3>
+          <p>Le vrai test du succès : que les équipes utilisent l'outil au quotidien, sans y revenir à contrecœur.</p>
+        </div>
+        <div class="waypoint">
+          <span class="pin">6</span>
+          <h3>Le suivi</h3>
+          <p>huveo reste disponible pour ajuster le cap. La transformation numérique est une ascension continue.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VALEURS -->
+  <section class="values" id="valeurs">
+    <div class="wrap">
+      <h2>Ce qui guide chacun de nos pas.</h2>
+      <div class="values-list">
+        <div class="value-item">Comprendre avant d'agir</div>
+        <div class="value-item">Agir avec rigueur et intégrité</div>
+        <div class="value-item">Évoluer sans jamais s'arrêter</div>
+        <div class="value-item">Construire ensemble, réussir ensemble</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / SUMMIT -->
+  <section class="summit" id="contact">
+    <div class="wrap summit-inner">
+      <div class="flag" aria-hidden="true"></div>
+      <p class="eyebrow">Prochaine étape</p>
+      <h2>Prêt à entamer l'ascension ?</h2>
+      <p>Écrivez-nous pour discuter de votre réalité et de vos ambitions numériques. On prend le temps de comprendre le terrain avant de proposer une direction.</p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:info@huveo.ca?subject=Discutons%20de%20votre%20ascension%20num%C3%A9rique">info@huveo.ca</a>
+      </div>
+      <div class="details">
+        <span>+1 438-701-0099</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="logo" src="assets/Logo___transparent_texte_blanc.png" alt="huveo">
+    <p class="copy">© 2026 huveo — Comprendre. Transformer. Durer.</p>
+  </div>
+</footer>
+
+<script>
+  var siteHeader = document.querySelector('header');
+  function onSiteScroll(){
+    if(window.scrollY > 40){ siteHeader.classList.add('scrolled'); }
+    else{ siteHeader.classList.remove('scrolled'); }
+  }
+  window.addEventListener('scroll', onSiteScroll, {passive:true});
+  onSiteScroll();
+</script>
+</body>
+</html>
