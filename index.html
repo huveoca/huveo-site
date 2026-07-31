@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>huveo — Le sherpa numérique des PME et OBNL du Québec</title>
+<title>huveo — Stratégie numérique pour PME et OBNL du Québec</title>
 <meta name="description" content="huveo accompagne les PME et OBNL du Québec dans leur transformation numérique : stratégie numérique et ancrage numérique, du diagnostic jusqu'aux résultats.">
 <link rel="icon" type="image/png" href="assets/Ico_ne_seule___transparent2x.png">
 <link rel="canonical" href="https://huveo.ca/">
@@ -12,15 +12,15 @@
 <meta property="og:site_name" content="huveo">
 <meta property="og:locale" content="fr_CA">
 <meta property="og:url" content="https://huveo.ca/">
-<meta property="og:title" content="huveo — Le sherpa numérique des PME et OBNL du Québec">
-<meta property="og:description" content="Stratégie numérique et ancrage numérique : huveo accompagne les PME et OBNL du Québec du diagnostic jusqu'aux résultats, sans jamais lâcher la corde.">
+<meta property="og:title" content="huveo — Stratégie numérique pour PME et OBNL du Québec">
+<meta property="og:description" content="Stratégie numérique et ancrage numérique : huveo accompagne les PME et OBNL du Québec du diagnostic jusqu'aux résultats, avec un accompagnement constant.">
 <meta property="og:image" content="https://huveo.ca/assets/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="huveo — Comprendre. Transformer. Durer.">
 
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="huveo — Le sherpa numérique des PME et OBNL du Québec">
+<meta name="twitter:title" content="huveo — Stratégie numérique pour PME et OBNL du Québec">
 <meta name="twitter:description" content="Stratégie numérique et ancrage numérique : huveo accompagne les PME et OBNL du Québec du diagnostic jusqu'aux résultats.">
 <meta name="twitter:image" content="https://huveo.ca/assets/og-image.jpg">
 
@@ -92,8 +92,8 @@
   .btn.ghost{background:transparent; color:var(--white); border-color:rgba(255,255,255,.6);}
   .btn.ghost:hover{background:var(--white); color:var(--anthracite);}
 
-  /* ---------- Route / trail spine ---------- */
-  .trail-dot{
+  /* ---------- Route / timeline spine ---------- */
+  .timeline-dot{
     position:absolute; left:-999px; width:10px; height:10px; border-radius:50%;
   }
 
@@ -217,21 +217,21 @@
     font-size:.85rem; color:#666;
   }
 
-  /* ---------- Approach / trail ---------- */
+  /* ---------- Approach / timeline ---------- */
   .approach{padding:88px 0 96px; background:var(--white); position:relative;}
   .approach h2{font-size:clamp(1.7rem,3.2vw,2.3rem); max-width:20ch; margin-top:14px;}
   .approach-lead{max-width:60ch; color:#333; font-size:1rem;}
-  .trail{position:relative; margin-top:52px;}
-  .trail-line{
+  .timeline{position:relative; margin-top:52px;}
+  .timeline-line{
     position:absolute; left:19px; top:8px; bottom:8px; width:2px;
     background:repeating-linear-gradient(to bottom, var(--green) 0 6px, transparent 6px 12px);
   }
-  @media(min-width:760px){ .trail-line{left:23px;} }
-  .waypoint{
+  @media(min-width:760px){ .timeline-line{left:23px;} }
+  .step{
     position:relative; padding-left:58px; padding-bottom:40px;
   }
-  .waypoint:last-child{padding-bottom:0;}
-  .waypoint .pin{
+  .step:last-child{padding-bottom:0;}
+  .step .step-marker{
     position:absolute; left:0; top:0;
     width:40px; height:40px; border-radius:50%;
     background:var(--white); border:2px solid var(--green);
@@ -239,11 +239,11 @@
     font-weight:700; color:var(--green); font-size:1rem;
     box-shadow:0 0 0 6px var(--white);
   }
-  .waypoint:nth-child(4) .pin, .waypoint:nth-child(5) .pin, .waypoint:nth-child(6) .pin{
+  .step:nth-child(4) .step-marker, .step:nth-child(5) .step-marker, .step:nth-child(6) .step-marker{
     border-color:var(--blue); color:var(--blue);
   }
-  .waypoint h3{font-size:1.4rem; margin-bottom:8px;}
-  .waypoint p{font-size:1.05rem; color:#3a3a3a; max-width:62ch;}
+  .step h3{font-size:1.4rem; margin-bottom:8px;}
+  .step p{font-size:1.05rem; color:#3a3a3a; max-width:62ch;}
 
   /* ---------- Values band ---------- */
   .values{background:var(--green); color:var(--white); padding:64px 0;}
@@ -257,31 +257,31 @@
     font-weight:600; font-size:1.1rem;
   }
 
-  /* ---------- Contact / summit ---------- */
-  .summit{
+  /* ---------- Contact / final-cta ---------- */
+  .final-cta{
     background:var(--anthracite); color:var(--white);
     padding:96px 0 76px; position:relative; overflow:hidden;
   }
-  .summit .flag{
+  .final-cta .cta-marker{
     position:absolute; top:-58px; left:50%; transform:translateX(-50%);
     width:2px; height:42px; background:var(--cyan);
   }
-  .summit .flag::after{
+  .final-cta .cta-marker::after{
     content:""; position:absolute; top:0; left:2px;
     width:0; height:0;
     border-style:solid; border-width:7px 0 7px 14px;
     border-color:transparent transparent transparent var(--cyan);
   }
-  .summit-inner{text-align:center; max-width:640px; margin:0 auto; position:relative; z-index:2;}
-  .summit .eyebrow{color:var(--cyan);}
-  .summit h2{font-size:clamp(1.9rem,4vw,2.7rem); margin:16px 0 18px;}
-  .summit p{color:rgba(245,245,245,.78); font-size:1.05rem; margin-bottom:34px;}
-  .summit .cta-row{display:flex; gap:16px; flex-wrap:wrap; justify-content:center;}
-  .summit .details{
+  .final-cta-inner{text-align:center; max-width:640px; margin:0 auto; position:relative; z-index:2;}
+  .final-cta .eyebrow{color:var(--cyan);}
+  .final-cta h2{font-size:clamp(1.9rem,4vw,2.7rem); margin:16px 0 18px;}
+  .final-cta p{color:rgba(245,245,245,.78); font-size:1.05rem; margin-bottom:34px;}
+  .final-cta .cta-row{display:flex; gap:16px; flex-wrap:wrap; justify-content:center;}
+  .final-cta .details{
     margin-top:52px; display:flex; gap:32px; justify-content:center; flex-wrap:wrap;
     font-size:.92rem; color:rgba(245,245,245,.65);
   }
-  .summit .details a{color:rgba(245,245,245,.9); font-weight:600;}
+  .final-cta .details a{color:rgba(245,245,245,.9); font-weight:600;}
 
   /* ---------- Footer ---------- */
   footer{background:var(--anthracite); border-top:1px solid rgba(255,255,255,.1); padding:36px 0;}
@@ -289,7 +289,7 @@
   footer img.logo{height:56px;}
   footer .copy{color:rgba(245,245,245,.5); font-size:.82rem;}
 
-  /* background petal motif (used in hero & summit) */
+  /* background petal motif (used in hero & final-cta) */
   .petal{position:absolute; border-radius:50%; filter:blur(0);}
 
   @media (prefers-reduced-motion: reduce){
@@ -311,7 +311,7 @@
         <a href="#approche">Approche</a>
         <a href="#valeurs">Valeurs</a>
       </div>
-      <a class="btn nav-cta" href="mailto:info@huveo.ca?subject=Discutons%20de%20votre%20ascension%20num%C3%A9rique">Nous joindre</a>
+      <a class="btn nav-cta" href="mailto:info@huveo.ca?subject=Discutons%20de%20votre%20projet%20num%C3%A9rique">Nous joindre</a>
     </nav>
   </div>
 </header>
@@ -327,10 +327,10 @@
     </svg>
     <div class="wrap">
       <p class="eyebrow hero-eyebrow">Stratégie numérique · PME &amp; OBNL du Québec</p>
-      <h1>Le stratège qui vous mène au <span class="accent">sommet</span> de votre transformation numérique.</h1>
-      <p class="lead">huveo accompagne les PME et OBNL du Québec dont les ambitions numériques dépassent les ressources internes — un partenaire qui nomme les choses clairement, sans jargon, et reste engagé du premier diagnostic jusqu'aux résultats, sans jamais lâcher la corde.</p>
+      <h1>Le stratège qui vous accompagne <span class="accent">jusqu'aux résultats</span> de votre transformation numérique.</h1>
+      <p class="lead">huveo accompagne les PME et OBNL du Québec dont les ambitions numériques dépassent les ressources internes — un partenaire qui nomme les choses clairement, sans jargon, et reste engagé du premier diagnostic jusqu'aux résultats.</p>
       <div class="cta-row">
-        <a class="btn" href="mailto:info@huveo.ca?subject=Discutons%20de%20votre%20ascension%20num%C3%A9rique">Discuter de votre projet</a>
+        <a class="btn" href="mailto:info@huveo.ca?subject=Discutons%20de%20votre%20projet%20num%C3%A9rique">Discuter de votre projet</a>
         <a class="btn ghost" href="#services">Voir nos services ↓</a>
       </div>
       <div class="position-line">
@@ -346,7 +346,7 @@
     <div class="wrap">
       <p class="eyebrow">Qui est huveo</p>
       <h2>Le stratège qui reste à vos côtés, du diagnostic aux résultats.</h2>
-      <p class="intro-lead">Les PME et les OBNL ont des ambitions numériques réelles — mais rarement les ressources internes pour les concrétiser seules. huveo est le partenaire qui comprend leur réalité, parle leur langage et reste en cordée jusqu'au sommet.</p>
+      <p class="intro-lead">Les PME et les OBNL ont des ambitions numériques réelles — mais rarement les ressources internes pour les concrétiser seules. huveo est le partenaire qui comprend leur réalité, parle leur langage et reste engagé jusqu'aux résultats.</p>
       <div class="intro-grid">
         <div class="mv-card">
           <h3>Notre mission</h3>
@@ -368,13 +368,13 @@
   <section class="services" id="services">
     <div class="wrap">
       <p class="eyebrow">Nos services</p>
-      <h2>Deux services qui avancent en cordée l'un avec l'autre.</h2>
+      <h2>Deux services complémentaires, pensés pour avancer ensemble.</h2>
 
       <div class="svc-grid">
         <article class="svc-card">
           <span class="svc-num">Stratégie</span>
           <h3>Stratégie numérique</h3>
-          <p class="tag">Tracer la route, sécuriser chaque étape, et rester à vos côtés jusqu'au sommet.</p>
+          <p class="tag">Tracer la route, sécuriser chaque étape, et rester à vos côtés jusqu'aux résultats.</p>
           <ul>
             <li>Un diagnostic honnête de vos outils, processus et capacité réelle d'absorber le changement</li>
             <li>Une feuille de route priorisée, alignée sur vos objectifs et sur le rythme d'adoption de vos équipes</li>
@@ -386,7 +386,7 @@
         <article class="svc-card">
           <span class="svc-num">Ancrage</span>
           <h3>Ancrage numérique</h3>
-          <p class="tag">Le bon ancrage ne garantit pas le sommet — mais son absence garantit presque la chute.</p>
+          <p class="tag">Le bon ancrage ne garantit pas le succès — mais son absence le compromet presque toujours.</p>
           <ul>
             <li>Microsoft 365 et Google Workspace comme points de repère, avec l'IA intégrée en toute transparence</li>
             <li>Sélection éclairée des licences et niveaux de service, alignés sur vos processus réels</li>
@@ -398,45 +398,45 @@
     </div>
   </section>
 
-  <!-- APPROCHE / TRAIL -->
+  <!-- APPROCHE / TIMELINE -->
   <section class="approach" id="approche">
     <div class="wrap">
       <p class="eyebrow">Notre approche de livraison</p>
-      <h2>Une ascension, une étape à la fois.</h2>
+      <h2>Une approche structurée, une étape à la fois.</h2>
       <p class="approach-lead">On ne saute jamais une étape pour aller plus vite — c'est souvent ce qui fait retomber une organisation plus bas qu'avant.</p>
 
-      <div class="trail">
-        <div class="trail-line" aria-hidden="true"></div>
+      <div class="timeline">
+        <div class="timeline-line" aria-hidden="true"></div>
 
-        <div class="waypoint">
-          <span class="pin">1</span>
+        <div class="step">
+          <span class="step-marker">1</span>
           <h3>Le premier contact</h3>
           <p>Comprendre votre réalité et vos contraintes avant même de proposer un mandat.</p>
         </div>
-        <div class="waypoint">
-          <span class="pin">2</span>
+        <div class="step">
+          <span class="step-marker">2</span>
           <h3>Le diagnostic</h3>
-          <p>Lire le terrain — outils, processus, gens — pas seulement l'inventaire technique.</p>
+          <p>Comprendre le contexte réel — outils, processus, gens — pas seulement l'inventaire technique.</p>
         </div>
-        <div class="waypoint">
-          <span class="pin">3</span>
+        <div class="step">
+          <span class="step-marker">3</span>
           <h3>La feuille de route</h3>
           <p>Un plan priorisé et séquencé selon votre capacité réelle à absorber le changement.</p>
         </div>
-        <div class="waypoint">
-          <span class="pin">4</span>
+        <div class="step">
+          <span class="step-marker">4</span>
           <h3>La mise en œuvre</h3>
-          <p>huveo exécute directement — et reste en cordée avec des partenaires quand une expertise pointue est requise.</p>
+          <p>huveo exécute directement — et collabore avec des partenaires quand une expertise pointue est requise.</p>
         </div>
-        <div class="waypoint">
-          <span class="pin">5</span>
+        <div class="step">
+          <span class="step-marker">5</span>
           <h3>L'adoption</h3>
           <p>Le vrai test du succès : que les équipes utilisent l'outil au quotidien, sans y revenir à contrecœur.</p>
         </div>
-        <div class="waypoint">
-          <span class="pin">6</span>
+        <div class="step">
+          <span class="step-marker">6</span>
           <h3>Le suivi</h3>
-          <p>huveo reste disponible pour ajuster le cap. La transformation numérique est une ascension continue.</p>
+          <p>huveo reste disponible pour ajuster le cap. La transformation numérique est un travail continu.</p>
         </div>
       </div>
     </div>
@@ -455,15 +455,15 @@
     </div>
   </section>
 
-  <!-- CONTACT / SUMMIT -->
-  <section class="summit" id="contact">
-    <div class="wrap summit-inner">
-      <div class="flag" aria-hidden="true"></div>
+  <!-- CONTACT / CTA FINAL -->
+  <section class="final-cta" id="contact">
+    <div class="wrap final-cta-inner">
+      <div class="cta-marker" aria-hidden="true"></div>
       <p class="eyebrow">Prochaine étape</p>
-      <h2>Prêt à entamer l'ascension ?</h2>
-      <p>Écrivez-nous pour discuter de votre réalité et de vos ambitions numériques. On prend le temps de comprendre le terrain avant de proposer une direction.</p>
+      <h2>Prêt à passer à l'action ?</h2>
+      <p>Écrivez-nous pour discuter de votre réalité et de vos ambitions numériques. On prend le temps de comprendre votre contexte avant de proposer une direction.</p>
       <div class="cta-row">
-        <a class="btn" href="mailto:info@huveo.ca?subject=Discutons%20de%20votre%20ascension%20num%C3%A9rique">info@huveo.ca</a>
+        <a class="btn" href="mailto:info@huveo.ca?subject=Discutons%20de%20votre%20projet%20num%C3%A9rique">info@huveo.ca</a>
       </div>
       <div class="details">
         <span>+1 438-701-0099</span>
